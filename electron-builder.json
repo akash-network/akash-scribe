@@ -207,7 +207,7 @@
   },
   "publish": {
     "provider": "github",
-    "owner": "rodri-r",
+    "owner": "akash-network",
     "repo": "akash-scribe",
     "private": false,
     "releaseType": "draft"

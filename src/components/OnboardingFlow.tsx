@@ -200,7 +200,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
     if (cloudTranscriptionProvider !== "custom") {
       updateTranscriptionSettings({ cloudTranscriptionProvider: "custom" });
     }
-    if (!cloudTranscriptionBaseUrl || cloudTranscriptionBaseUrl.trim() === "") {
+    if (cloudTranscriptionBaseUrl === undefined || cloudTranscriptionBaseUrl === null) {
       updateTranscriptionSettings({ cloudTranscriptionBaseUrl: AKASH_ML_BASE_URL });
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -532,7 +532,7 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
               setMistralApiKey={setMistralApiKey}
               customTranscriptionApiKey={customTranscriptionApiKey}
               setCustomTranscriptionApiKey={setCustomTranscriptionApiKey}
-              cloudTranscriptionBaseUrl={cloudTranscriptionBaseUrl || AKASH_ML_BASE_URL}
+              cloudTranscriptionBaseUrl={cloudTranscriptionBaseUrl}
               setCloudTranscriptionBaseUrl={(url) =>
                 updateTranscriptionSettings({ cloudTranscriptionBaseUrl: url })
               }

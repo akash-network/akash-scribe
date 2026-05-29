@@ -126,7 +126,7 @@ function useSettingsInternal() {
     if (cloudTranscriptionProvider !== "custom") {
       setCloudTranscriptionProvider("custom");
     }
-    if (!cloudTranscriptionBaseUrl || cloudTranscriptionBaseUrl.trim() === "") {
+    if (cloudTranscriptionBaseUrl === undefined || cloudTranscriptionBaseUrl === null) {
       setCloudTranscriptionBaseUrl(AKASH_ML_BASE_URL);
     }
     if (cloudTranscriptionMode !== "byok") {

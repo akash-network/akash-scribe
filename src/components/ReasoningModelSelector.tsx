@@ -99,7 +99,7 @@ export default function ReasoningModelSelector({
 
   // AKASHML: Pre-fill AkashML URL if blank and force provider to "custom"
   useEffect(() => {
-    if (!cloudReasoningBaseUrl || cloudReasoningBaseUrl.trim() === "") {
+    if (cloudReasoningBaseUrl === undefined || cloudReasoningBaseUrl === null) {
       setCloudReasoningBaseUrl(AKASH_ML_BASE_URL);
       setCustomBaseInput(AKASH_ML_BASE_URL);
     } else {

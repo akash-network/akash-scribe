@@ -47,7 +47,7 @@ export default function AgentModeSettings() {
   // and uncomment the isCloudMode / isCustomMode JSX block below.
   useEffect(() => {
     setCloudAgentMode("byok");
-    if (!cloudReasoningBaseUrl || cloudReasoningBaseUrl.trim() === "") {
+    if (cloudReasoningBaseUrl === undefined || cloudReasoningBaseUrl === null) {
       setCloudReasoningBaseUrl(AKASH_ML_BASE_URL);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps

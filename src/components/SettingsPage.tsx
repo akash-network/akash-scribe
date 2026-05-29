@@ -235,7 +235,7 @@ function TranscriptionSection({
     if (cloudTranscriptionProvider !== "custom") {
       setCloudTranscriptionProvider("custom");
     }
-    if (!cloudTranscriptionBaseUrl || cloudTranscriptionBaseUrl.trim() === "") {
+    if (cloudTranscriptionBaseUrl === undefined || cloudTranscriptionBaseUrl === null) {
       setCloudTranscriptionBaseUrl(AKASH_ML_BASE_URL);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -331,7 +331,7 @@ function TranscriptionSection({
         setMistralApiKey={setMistralApiKey}
         customTranscriptionApiKey={customTranscriptionApiKey}
         setCustomTranscriptionApiKey={setCustomTranscriptionApiKey}
-        cloudTranscriptionBaseUrl={cloudTranscriptionBaseUrl || AKASH_ML_BASE_URL}
+        cloudTranscriptionBaseUrl={cloudTranscriptionBaseUrl}
         setCloudTranscriptionBaseUrl={setCloudTranscriptionBaseUrl}
         variant="settings"
       />

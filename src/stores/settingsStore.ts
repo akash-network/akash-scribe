@@ -301,7 +301,7 @@ export const useSettingsStore = create<SettingsState>()((set, get) => ({
   cloudTranscriptionBaseUrl: readStringAkash(
     "cloudTranscriptionBaseUrl",
     AKASH_ML_BASE_URL,
-    [API_ENDPOINTS.TRANSCRIPTION_BASE, API_ENDPOINTS.OPENAI_BASE, ""]
+    [API_ENDPOINTS.TRANSCRIPTION_BASE, API_ENDPOINTS.OPENAI_BASE]
   ),
 
   // AKASHML: was readString("cloudTranscriptionMode", hasStoredByokKey() ? "byok" : "openwhispr")

@@ -1,5 +1,5 @@
 {
-  "name": "akash-scribe",
+  "name": "scribe",
   "version": "0.0.4",
   "description": "A desktop dictation application that uses Akash ML for speech-to-text transcription",
   "main": "main.js",

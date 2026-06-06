@@ -30,7 +30,7 @@ class UpdateManager {
     // Configure auto-updater for GitHub releases
     autoUpdater.setFeedURL({
       provider: "github",
-      owner: "rodri-r",
+      owner: "akash-network",
       repo: "akash-scribe",
       private: false,
     });
@@ -300,12 +300,6 @@ class UpdateManager {
   }
 
   checkForUpdatesOnStartup() {
-    // AKASHML: Background update check disabled until we publish our own
-    // GitHub releases. The updater is fully set up and will work once
-    // releases exist at github.com/rodri-r/akash-scribe/releases.
-    // To re-enable: remove this return statement.
-    return;
-
     // eslint-disable-next-line no-unreachable
     if (process.env.NODE_ENV !== "development") {
       setTimeout(() => {
